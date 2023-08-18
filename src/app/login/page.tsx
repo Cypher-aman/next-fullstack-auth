@@ -66,7 +66,7 @@ const LoginPage = function () {
           Login
         </button>
         <p>
-          Don't have an account. &nbsp;
+          Don&rsquo;t have an account. &nbsp;
           <Link className="underline" href="/signup">
             Click here to signup
           </Link>
