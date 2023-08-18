@@ -34,7 +34,11 @@ export const POST = async (req: NextRequest) => {
       to: `${user.email}`,
       subject: "Hello ✔",
       text: "Hello world?",
-      html: `<p> Not verified? Click here to get verified <a href=${process.env.DOMAIN}/verifyuser?token=${token}>Verify</a> </p>`,
+      html: `<p> Not verified? Click here to get verified <a href=${process.env.DOMAIN}/verifyuser?token=${token}>Verify</a>
+      Or you can copy and paste this link - </p>
+      <p>
+        ${process.env.DOMAIN}/verifyuser?token=${token}
+      </p>`,
     });
 
     return NextResponse.json(
